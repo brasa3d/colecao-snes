@@ -24,6 +24,7 @@ jobs:
           mkdir _site
           unzip -qo site-1.zip -d _site
           unzip -qo site-4.zip -d _site
+          unzip -qo site-5.zip -d _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
