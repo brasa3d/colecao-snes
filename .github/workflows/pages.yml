@@ -25,6 +25,10 @@ jobs:
           unzip -qo site-1.zip -d _site
           unzip -qo site-4.zip -d _site
           unzip -qo site-5.zip -d _site
+          for archive in jogo-*.zip; do
+            [ -f "$archive" ] || continue
+            unzip -qo "$archive" -d _site
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
